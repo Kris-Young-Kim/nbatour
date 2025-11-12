@@ -1,0 +1,226 @@
+---
+alwaysApply: false
+---
+## 🎯 개발 지침
+
+### 이미지 처리
+```typescript
+// ✅ Good: Next.js Image 컴포넌트
+import Image from 'next/image'
+
+<Image
+  src="/images/hero-bg.jpg"
+  alt="NBA 경기장"
+  width={1920}
+  height={1080}
+  priority
+/>
+
+// ❌ Bad: HTML img 태그
+<img src="/images/hero-bg.jpg" alt="..." />
+```
+
+### 성능 최적화
+- 모든 이미지에 `width`, `height` 지정
+- Hero 이미지: `priority` 속성 추가
+- 나머지 이미지: lazy loading (기본값)
+- 폰트: `Noto Sans KR` 사용
+
+### 접근성
+```typescript
+// ✅ Good: 의미있는 시맨틱 HTML
+<section id="itinerary" className="...">
+  <h2 className="text-3xl">5일 일정</h2>
+  <button
+    aria-expanded={isExpanded}
+    aria-controls="day-details"
+    onClick={handleToggle}
+  >
+    자세히 보기
+  </button>
+</section>
+
+// ❌ Bad: 의미없는 div
+<div className="...">
+  <div className="text-3xl">5일 일정</div>
+  <div onClick={handleToggle}>자세히 보기</div>
+</div>
+```
+
+---
+
+## 🔄 Git 커밋 규칙
+
+### 커밋 메시지 형식
+```
+<type>(<scope>): <subject>
+
+<body>
+<footer>
+```
+
+### Type 정의
+| Type | 설명 | 예시 |
+|------|------|------|
+| **feat** | 새로운 기능 추가 | `feat(hero): Add NBA background image` |
+| **fix** | 버그 수정 | `fix(itinerary): Fix accordion toggle animation` |
+| **refactor** | 코드 리팩토링 | `refactor(pricing): Extract price calculation` |
+| **style** | 스타일링 변경 | `style(hero): Apply responsive design` |
+| **docs** | 문서 수정 | `docs: Update README with setup guide` |
+| **test** | 테스트 추가 | `test(hero): Add Hero component tests` |
+| **chore** | 빌드, 패키지 관리 | `chore: Update dependencies` |
+
+### 좋은 커밋 예시
+```
+feat(hero): Add Hero section with full-width background image
+
+- Implement Hero component with headline, subtitle, and CTA buttons
+- Add responsive design for mobile and desktop
+- Integrate Next.js Image for optimization
+- Add dark mode support
+
+Closes #1
+```
+
+---
+
+## 🎨 디자인 시스템
+
+### 색상 팔레트
+```typescript
+// colors in tailwind.config.ts
+const colors = {
+  'lakers-purple': '#552583',
+  'warriors-blue': '#1D428A',
+  'basketball-orange': '#FF7A00',
+}
+
+// Usage
+<button className="bg-lakers-purple hover:bg-warriors-blue">
+  투어 신청하기
+</button>
+```
+
+### 라이트 모드
+- 배경: 흰색 (#FFFFFF)
+- 텍스트: 검정색 (#000000)
+- 카드: 밝은 회색 (#F3F4F6)
+- 보더: 밝은 회색 (#E5E7EB)
+
+### 다크 모드
+- 배경: 검정색 (#0F0F0F)
+- 텍스트: 흰색 (#FFFFFF)
+- 카드: 어두운 회색 (#1F2937)
+- 보더: 어두운 회색 (#374151)
+
+### 반응형 브레이크포인트
+```
+모바일:   < 640px  (sm)
+태블릿:  640-1024px (md-lg)
+데스크톱: > 1024px   (xl-2xl)
+```
+
+---
+
+## 📊 성능 목표
+
+| 지표 | 목표 | 설명 |
+|------|------|------|
+| **Lighthouse** | >90 | 성능, 접근성, 권장사항 |
+| **FCP** | <2초 | First Contentful Paint |
+| **LCP** | <2.5초 | Largest Contentful Paint |
+| **CLS** | <0.1 | Cumulative Layout Shift |
+| **TTI** | <3.5초 | Time to Interactive |
+
+---
+
+## 🚀 배포 준비
+
+### 배포 전 체크리스트
+- [ ] 모든 컴포넌트 완성
+- [ ] 반응형 디자인 테스트
+- [ ] 다크/라이트 모드 동작
+- [ ] 모든 링크 & CTA 테스트
+- [ ] 이미지 로딩 확인
+- [ ] Lighthouse 90+ 달성
+- [ ] Core Web Vitals 확인
+- [ ] 크로스브라우저 테스트 (Chrome, Firefox, Safari, Edge)
+- [ ] 모바일 디바이스 테스트
+- [ ] 접근성 감사 완료
+- [ ] SEO 메타데이터 설정
+- [ ] Git commit 완료
+
+### Vercel 배포
+```bash
+# main 브랜치로 푸시
+git push origin main
+
+# Vercel 자동 배포 트리거
+# → 배포 완료 후 URL 제공
+```
+
+---
+
+## 🔧 유용한 명령어
+
+```bash
+# 개발 서버
+pnpm dev
+
+# 프로덕션 빌드
+pnpm build
+
+# 성능 분석
+pnpm build --analyze
+
+# 코드 린팅
+pnpm lint
+
+# 코드 포맷팅
+pnpm format
+
+# TypeScript 타입 체크
+pnpm type-check
+
+# 전체 검사
+pnpm check-all
+```
+
+---
+
+## ⚠️ 주의사항
+
+### 피해야 할 것들
+- ❌ 하드코딩된 값 → `/lib/constants.ts`에서 import
+- ❌ HTML `<img>` 태그 → Next.js `Image` 컴포넌트 사용
+- ❌ Tailwind 축약형 → 완전한 클래스명 사용
+- ❌ 무의미한 div → 시맨틱 HTML 사용
+- ❌ Props any 타입 → interface로 정의
+- ❌ 스타일 태그 → Tailwind CSS 사용
+
+### 자주 하는 실수
+| 실수 | 해결책 |
+|------|--------|
+| 이미지 안 보임 | `public/images` 경로 확인 |
+| Tailwind 클래스 미적용 | `tailwind.config.ts` 콘텐츠 경로 확인 |
+| 다크모드 안 됨 | `dark:` 클래스 포함, layout에 `dark` class 관리 |
+| 아코디언 애니메이션 끊김 | `transition` 클래스 추가 |
+| 배포 실패 | `pnpm build` 로컬에서 먼저 테스트 |
+
+---
+
+## 📚 참고 자료
+
+- [Next.js 14 문서](https://nextjs.org/docs)
+- [Tailwind CSS 4 가이드](https://tailwindcss.com/docs)
+- [TypeScript 강좌](https://www.typescriptlang.org/docs/)
+- [React Best Practices](https://react.dev/reference)
+- [Cursor 사용 가이드](https://docs.cursor.sh)
+
+---
+
+## 🎯 핵심 원칙 3가지
+
+1. **명확성**: 코드는 다른 개발자도 쉽게 이해할 수 있도록
+2. **성능**: 사용자 경험을 최우선으로 (Lighthouse 90+)
+3. **접근성**: 모든 사용자가 동등하게 이용할 수 있도록 (WCAG 2.1 AA)
