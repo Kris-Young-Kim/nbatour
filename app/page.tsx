@@ -1,14 +1,23 @@
+import { Header } from '@/components/Header'
+import { Hero } from '@/components/Hero'
+import { NBASpotlight } from '@/components/NBA-Spotlight'
+import { Itinerary } from '@/components/Itinerary'
+import { Highlights } from '@/components/Highlights'
+import { Pricing } from '@/components/Pricing'
+import { FAQ } from '@/components/FAQ'
+import { Footer } from '@/components/Footer'
+
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-4">
-          김맘바와 함께하는 NBA 직관투어 2026
-        </h1>
-        <p className="text-center text-gray-600 dark:text-gray-400">
-          샌프란시스코, LA에서 만나는 NBA의 모든 것
-        </p>
-      </div>
+      <Header />
+      <Hero />
+      <NBASpotlight />
+      <Itinerary />
+      <Highlights />
+      <Pricing />
+      <FAQ />
+      <Footer />
     </main>
   )
 }
