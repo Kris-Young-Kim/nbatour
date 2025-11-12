@@ -1,3 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # dependencies
 /node_modules
 /.pnp
@@ -21,7 +23,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 
 # local env files
 .env*.local
@@ -35,26 +36,11 @@ pnpm-debug.log*
 next-env.d.ts
 
 # IDE
-.vscode
-.idea
+.vscode/
+.idea/
 *.swp
 *.swo
 *~
 
 # OS
 Thumbs.db
-.DS_Store
-
-# Git setup scripts
-.git-init.sh
-.git-init.ps1
-GIT_SETUP.md
-
-# Documentation files
-*.hwp
-*.pdf
-docs/*.md
-!docs/README.md
-!docs/DEPLOYMENT.md
-!docs/TODO.md
-
