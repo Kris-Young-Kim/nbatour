@@ -19,18 +19,28 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         {!imageError ? (
           <img
-            src="/images/arena-hero.jpg"
+            src="/images/arena-hero-new.jpg"
             alt="NBA 경기장"
             className="absolute inset-0 w-full h-full object-cover"
             onError={() => setImageError(true)}
           />
         ) : (
-          <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-gray-900 to-black flex items-center justify-center">
-            <div className="text-center text-white/50">
-              <svg className="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <p className="text-lg">NBA 경기장 이미지</p>
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-gray-900 to-black">
+            {/* 플레이스홀더 패턴 */}
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute inset-0" style={{
+                backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.05) 35px, rgba(255,255,255,.05) 70px)`,
+              }} />
+            </div>
+            {/* 농구공 아이콘 */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center text-white/40">
+                <svg className="w-32 h-32 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.09 11l1.86-1.86a1 1 0 0 0 0-1.41l-2.58-2.58a1 1 0 0 0-1.41 0L13.5 6.09 12.09 4.68a1 1 0 0 0-1.41 0L8.1 7.27a1 1 0 0 0 0 1.41L9.5 10.09l-1.4 1.4a1 1 0 0 0 0 1.41l2.58 2.58a1 1 0 0 0 1.41 0l1.4-1.4 1.41 1.41a1 1 0 0 0 1.41 0l2.58-2.58a1 1 0 0 0 0-1.41L17.09 11zm-5.66 2.83l-1.41-1.41-4.24 4.24a1 1 0 0 0 0 1.41l2.58 2.58a1 1 0 0 0 1.41 0l4.24-4.24-1.41-1.41zM4.83 13.41l4.24-4.24 1.41 1.41-4.24 4.24a1 1 0 0 1-1.41 0l-2.58-2.58a1 1 0 0 1 0-1.41l2.58-2.58a1 1 0 0 1 1.41 0z"/>
+                </svg>
+                <p className="text-xl font-semibold">NBA 직관투어 2026</p>
+                <p className="text-sm mt-2">김맘바와 함께하는 특별한 경험</p>
+              </div>
             </div>
           </div>
         )}
