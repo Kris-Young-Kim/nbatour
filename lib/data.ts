@@ -16,7 +16,7 @@ export const ITINERARY = [
       '호텔 체크인 및 휴식',
     ],
     mealInfo: '기내식',
-    image: '/images/chase-center.jpg',
+    image: '/images/san-francisco.jpg',
     type: 'travel',
   },
   {
@@ -38,7 +38,7 @@ export const ITINERARY = [
       '호텔 투숙 및 휴식',
     ],
     mealInfo: '호텔 조식, 자체 준비 (중식), 경기장/자체 (석식 $30 지급)',
-    image: '/images/san-francisco.jpg',
+    image: '/images/chase-center.jpg',
     gameInfo: {
       teams: 'Warriors vs Grizzlies',
       venue: 'Chase Center',
@@ -65,7 +65,7 @@ export const ITINERARY = [
       '호텔 투숙 및 휴식',
     ],
     mealInfo: '호텔 조식, 중식 $20 지급, 자체 준비 (석식)',
-    image: '/images/crypto-arena.jpg',
+    image: '/images/crypto-arena-lakers-spurs.jpg',
     gameInfo: {
       teams: 'Lakers vs Spurs',
       venue: 'Crypto Arena',
@@ -91,7 +91,7 @@ export const ITINERARY = [
       '호텔 투숙 및 휴식',
     ],
     mealInfo: '호텔 조식, 자체 준비 (중식, 석식)',
-    image: '/images/KakaoTalk_20251112_155242330_05.jpg',
+    image: '/images/los-angeles.jpg',
     type: 'sightseeing',
   },
   {
@@ -114,7 +114,7 @@ export const ITINERARY = [
       '짐 정리 및 최종 준비',
     ],
     mealInfo: '호텔 조식, 중식 $20 지급, 자체 준비 (석식)',
-    image: '/images/crypto-arena-new.jpg',
+    image: '/images/crypto-arena-lakers-mavericks.jpg',
     gameInfo: {
       teams: 'Lakers vs Mavericks',
       venue: 'Crypto Arena',
