@@ -16,7 +16,7 @@ export const ITINERARY = [
       '호텔 체크인 및 휴식',
     ],
     mealInfo: '기내식',
-    image: '/images/asiana-airlines.jpg',
+    image: '/images/istockphoto-1692389542-612x612.jpg',
     type: 'travel',
   },
   {
