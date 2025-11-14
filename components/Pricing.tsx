@@ -24,7 +24,7 @@ export function Pricing() {
               <p className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                 ₩{TOUR_INFO.deposit.toLocaleString()}
               </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">12월 15일 전까지 선입금</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">선입금 원칙</p>
             </div>
             <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">잔금</h3>

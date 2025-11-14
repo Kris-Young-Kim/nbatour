@@ -33,6 +33,7 @@
 
 2/10일 로스엔젤레스 * NBA WATCH & LA TOUR
 10:00 *조식 후 아울렛쇼핑출발
+      *Intuit Dome 견학
 17:00 *쇼핑후 LA Lakers Crypto Arena이동
 19:30 *NBA경기관람
 (LA Lakers 대 San Antonio Spurs)

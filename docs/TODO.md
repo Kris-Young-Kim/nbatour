@@ -1,8 +1,8 @@
 ﻿# NBA 직관투어 랜딩페이지 - 개발 TODO 리스트
 
 > **프로젝트**: 김맘바와 함께하는 NBA 직관투어 2026  
-> **기간**: 2026.02.08 ~ 2026.02.13 (5박 6일)  
-> **가격**: ₩7,300,000 (계약금 ₩2,000,000, 잔금 ₩5,300,000)  
+> **기간**: 2026.02.07 ~ 2026.02.13 (6박 7일)  
+> **가격**: ₩7,300,000 (계약금 ₩1,000,000, 잔금 ₩6,300,000)  
 > **기술 스택**: Next.js 14+, TypeScript, Tailwind CSS, pnpm  
 > **배포**: Vercel
 
@@ -72,7 +72,7 @@
   - [x] 가격 정보 (총액, 계약금, 잔금)
   - [x] 설명 및 서브타이틀
 - [x] 경기 정보 (`GAMES`)
-  - [x] 3경기 데이터 (Lakers vs Thunder, Lakers vs Spurs, Warriors vs Spurs)
+  - [x] 4경기 데이터 (Lakers vs Warriors, Lakers vs Thunder, Lakers vs Spurs, Warriors vs Grizzlies)
   - [x] 팀 정보, 경기장, 날짜
   - [x] 로고 및 이미지 경로
 - [x] FAQ 데이터 (`FAQ_DATA`)
@@ -82,7 +82,7 @@
 - [x] 불포함사항 (`EXCLUDED_ITEMS`)
   - [x] NBA 입장권 등 각종 입장료, 옵션 관광
 - [x] 항공 정보 (`FLIGHT_INFO`)
-  - [x] 출발: LAX 공항 도착 06:50 AM (2/8)
+  - [x] 출발: LAX 공항 도착 06:50 AM (2/7)
   - [x] 귀국: SFO 공항 출발 (2/13)
 - [x] 호텔 정보 (`HOTEL_INFO`)
   - [x] LA: Best Western Plus Hotel (2더블베드룸)
@@ -90,13 +90,14 @@
 
 ### 2.2 `lib/data.ts` 생성
 
-- [x] 6일 일정 데이터 (`ITINERARY`)
-  - [x] Day 1: 로스앤젤레스 도착 & LA 투어 (산타모니카 비치, 게티비라, 베버리힐스, 할리우드)
-  - [x] Day 2: LA 관광 & Lakers vs Thunder
-  - [x] Day 3: 아울렛 쇼핑 & Lakers vs Spurs
-  - [x] Day 4: 샌프란시스코 이동 & Warriors vs Spurs
-  - [x] Day 5: 샌프란시스코 관광 (금문교, 피셔맨스워프, 페리빌딩, 베이크루즈 유람선)
-  - [x] Day 6: 인천 귀국
+- [x] 7일 일정 데이터 (`ITINERARY`)
+  - [x] Day 1: 로스앤젤레스 도착 & LA 투어 & Lakers vs Warriors
+  - [x] Day 2: LA 투어
+  - [x] Day 3: LA 관광 & Lakers vs Thunder
+  - [x] Day 4: 아울렛 쇼핑 & Lakers vs Spurs (Intuit Dome 견학 포함)
+  - [x] Day 5: 샌프란시스코 이동 & Warriors vs Grizzlies
+  - [x] Day 6: 샌프란시스코 관광 (금문교, 피셔맨스워프, 페리빌딩, 베이크루즈 유람선)
+  - [x] Day 7: 인천 귀국
 - [x] 타입 정의 (`ItineraryDay`, `Game`)
 
 ---
@@ -129,7 +130,7 @@
 
 - [x] `components/NBA-Spotlight.tsx`
   - [x] 타이틀: "관람 경기"
-  - [x] 3개 경기 카드
+  - [x] 4개 경기 카드
     - [x] 팀 로고 또는 선수 사진 (큼직하게)
     - [x] 경기 정보 (팀 vs 팀)
     - [x] 장소 & 날짜
@@ -141,7 +142,7 @@
 ### 3.4 Itinerary Section
 
 - [x] `components/Itinerary.tsx`
-  - [x] 6일 일정 표시
+  - [x] 7일 일정 표시
   - [x] 아코디언 기능 (확장/축약)
   - [x] 각 일차 카드
     - [x] 날짜 (Day 1 | 2/8)
@@ -159,7 +160,7 @@
 - [x] `components/Highlights.tsx`
   - [x] 4개 카드 레이아웃
     - [x] 연예인 가이드 + 농구 성지 순례
-    - [x] 3경기 NBA 직관 (빅매치!)
+    - [x] 4경기 NBA 직관 (빅매치!)
     - [x] 전식사 프로그램 + Intuit Dome 견학
     - [x] ₩1억 여행자보험 + 럭셔리 호텔
   - [x] 아이콘 또는 이미지
@@ -170,8 +171,8 @@
 
 - [x] `components/Pricing.tsx`
   - [x] 총액: ₩7,300,000
-  - [x] 계약금: ₩2,000,000 (신청 시)
-  - [x] 잔금: ₩5,300,000 (출발 1~2주 전)
+  - [x] 계약금: ₩1,000,000 (신청 시)
+  - [x] 잔금: ₩6,300,000 (출발 15일 전)
   - [x] 포함사항 목록
   - [x] 불포함사항 목록
   - [x] 명확한 시각적 구분
@@ -185,7 +186,7 @@
     - [x] 환율 변동 시 가격 조정? (730만원 동결)
     - [x] 현지 합류 가능?
     - [x] 추가 체류 가능?
-    - [x] 입금 일정? (계약금 200만원, 잔금 530만원)
+    - [x] 입금 일정? (계약금 100만원, 잔금 630만원)
     - [x] 현재 신청 현황?
   - [x] 아코디언 기능 (확장/축약)
   - [x] 부드러운 애니메이션

@@ -84,6 +84,7 @@ export const ITINERARY = [
     activities: [
       '호텔 조식 (10:00)',
       '아울렛 쇼핑 출발',
+      'Intuit Dome 견학',
       '쇼핑 후 Crypto Arena 이동 (17:00)',
       'NBA 경기 관람 (19:30)',
       'Los Angeles Lakers vs San Antonio Spurs',
@@ -162,43 +163,42 @@ export const ITINERARY = [
     image: '/images/istockphoto-1692389542-612x612.jpg',
     type: 'travel',
   },
-]
+];
 
 // 타입 정의
 export interface ItineraryDay {
-  day: number
-  date: string
-  dateDisplay: string
-  title: string
-  titleEn: string
-  location: string
-  locationKo: string
-  activities: string[]
-  mealInfo: string
-  image: string
+  day: number;
+  date: string;
+  dateDisplay: string;
+  title: string;
+  titleEn: string;
+  location: string;
+  locationKo: string;
+  activities: string[];
+  mealInfo: string;
+  image: string;
   gameInfo?: {
-    teams: string
-    venue: string
-    date: string
-  }
-  type: 'travel' | 'game' | 'sightseeing'
+    teams: string;
+    venue: string;
+    date: string;
+  };
+  type: 'travel' | 'game' | 'sightseeing';
 }
 
 export interface Game {
-  id: number
-  teamA: string
-  teamB: string
-  teamAShort: string
-  teamBShort: string
-  venue: string
-  city: string
-  location: string
-  date: string
-  dateDisplay: string
-  mealAllowance: string
-  note: string
-  logoA: string
-  logoB: string
-  image: string
+  id: number;
+  teamA: string;
+  teamB: string;
+  teamAShort: string;
+  teamBShort: string;
+  venue: string;
+  city: string;
+  location: string;
+  date: string;
+  dateDisplay: string;
+  mealAllowance: string;
+  note: string;
+  logoA: string;
+  logoB: string;
+  image: string;
 }
-
