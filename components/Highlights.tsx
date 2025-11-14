@@ -45,7 +45,7 @@ const HIGHLIGHTS = [
   },
   {
     id: 3,
-    title: '전식사 프로그램',
+    title: '전 식사 프로그램',
     description: (
       <>
         호텔 조식, 경기장 식사비 지급 등<br />
