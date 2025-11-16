@@ -69,9 +69,9 @@ export const GAMES = [
   {
     id: 4,
     teamA: 'Golden State Warriors',
-    teamB: 'Memphis Grizzlies',
+    teamB: 'San Antonio Spurs',
     teamAShort: 'Warriors',
-    teamBShort: 'Grizzlies',
+    teamBShort: 'Spurs',
     venue: 'Chase Center',
     city: 'San Francisco',
     location: '샌프란시스코',
@@ -80,7 +80,7 @@ export const GAMES = [
     mealAllowance: '자체 준비 (중식, 석식)',
     note: '빅매치!',
     logoA: '/images/warriors-logo.png',
-    logoB: '/images/grizzlies-logo.png',
+    logoB: '/images/spurs-logo.png',
     image: '/images/chase-center-game.jpg',
   },
 ];
