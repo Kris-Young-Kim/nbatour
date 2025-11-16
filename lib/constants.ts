@@ -109,11 +109,6 @@ export const FAQ_DATA = [
     answer:
       '항공권 부킹 마감이 1월 초이므로 12월 중순까지 계약금 100만원을 선입금하고, 투어 확정 후 출발 15일 전에 나머지 630만원을 결제합니다.',
   },
-  {
-    id: 5,
-    question: '현재 신청자는 몇 명인가요?',
-    answer: '20명부터 출발이며, 현재 약 10명이 신청했습니다.',
-  },
 ];
 
 // 포함사항
@@ -121,11 +116,12 @@ export const INCLUDED_ITEMS = [
   '전일정 호텔 (Best Western Plus Hotel / Bay Landing Hotel San Francisco 또는 동급)',
   '차량 및 가이드',
   '전일정 식사',
+  'NBA 입장권',
   '기사님 & 가이드 팁',
 ];
 
 // 불포함사항
-export const EXCLUDED_ITEMS = ['NBA 입장권 등 각종 입장료'];
+export const EXCLUDED_ITEMS = ['각종 개인 경비'];
 
 // 항공 정보
 export const FLIGHT_INFO = {
