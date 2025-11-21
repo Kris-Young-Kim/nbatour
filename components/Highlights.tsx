@@ -24,12 +24,12 @@ const HIGHLIGHTS = [
   },
   {
     id: 2,
-    title: '4경기 NBA 직관',
+    title: '3경기 NBA 직관',
     description: (
       <>
-        Warriors, Lakers 등 빅매치
+        Clippers, Lakers, Warriors 등 빅매치
         <br />
-        4경기를 직접 관람
+        3경기를 직접 관람
       </>
     ),
     icon: (

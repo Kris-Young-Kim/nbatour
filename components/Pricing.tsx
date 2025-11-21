@@ -16,7 +16,7 @@ export function Pricing() {
           <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg p-8 mb-8 text-white text-center shadow-xl">
             <p className="text-lg mb-2">투어 가격</p>
             <p className="text-5xl font-bold mb-4">₩{TOUR_INFO.price.toLocaleString()}</p>
-            <p className="text-blue-100">6박 7일 전 일정 포함</p>
+            <p className="text-blue-100">4박 5일 전 일정 포함</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg">

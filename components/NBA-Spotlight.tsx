@@ -11,7 +11,7 @@ export function NBASpotlight() {
           NBA 경기 일정
         </h2>
         <p className="text-center text-gray-600 dark:text-gray-400 mb-12 text-lg">
-          총 4경기의 NBA 직관 경험
+          총 3경기의 NBA 직관 경험
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {GAMES.map((game) => {
